@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Global Cyber Works</title>
+<link rel="stylesheet" href="..\css\style.css">
+<link rel="stylesheet" href="..\css\pricing.css">
+</head>
+<body>
+  
+ <!-- NAVBAR -->
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="..\html\home.html">Global Cyber Works</a>
+            </div>
+            <ul class="nav-menu">
+                <a href="..\html\home.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="partners.html" class="nav-link">Partners</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+  <section class="pricing-header">
+    <div class ="pricing-header-text">
+      <h1>Advanced Security Testing Services</h1>
+    <p>Trusted by 1000+ businesses. Comprehensive, agile, and expert-driven penetration   testing solutions.</p>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="pricing-tabs">
+    <button class="tab active" data-target="automated">Automated Pen Testing</button>
+    <button class="tab" data-target="ptaas">Pentesting (PTaaS)</button>
+  </div>
+
+  <!-- Automated Pen Testing Section -->
+  <section id="automated" class="pricing-section active">
+    <div class="card-container">
+      
+      <!-- IP Black Box -->
+      <div class="price-card">
+        <h2>IP Testing – Black Box</h2>
+        <p class="price">$99<span>/Month</span></p>
+        <ul>
+          <li>25 IPs included per bundle</li>
+          <li>2 scans per month</li>
+          <li>External, unauthenticated attack simulation</li>
+          <li>Detailed vulnerability reporting with risk ratings</li>
+          <li>Ideal for network infrastructure testing</li>
+        </ul>
+        <a href="#" class="cta-btn">Get Started</a>
+      </div>
+
+      <!-- App & API Black Box -->
+      <div class="price-card highlight">
+        <div class="badge orange">Popular</div>
+        <h2>App & API Testing / DAST – Black Box</h2>
+        <p class="price">$199<span>/Month</span></p>
+        <ul>
+          <li>1 Target (Web App or API)</li>
+          <li>2 scans per month</li>
+          <li>Automated DAST with 10,000+ tests</li>
+          <li>OWASP Top 10 & SANS standards coverage</li>
+          <li>Vulnerability dashboard with remediation insights</li>
+        </ul>
+        <a href="#" class="cta-btn orange">Try Now</a>
+      </div>
+
+      <!-- IP Gray Box -->
+      <div class="price-card">
+        <h2>IP Testing – Gray Box</h2>
+        <p class="price">$199<span>/Month</span></p>
+        <ul>
+          <li>25 IPs per bundle</li>
+          <li>2 scans per month</li>
+          <li>Authenticated internal security assessment</li>
+          <li>Custom access configuration</li>
+          <li>Comprehensive remediation report</li>
+        </ul>
+        <a href="#" class="cta-btn">Get Started</a>
+      </div>
+
+      <!-- App & API Gray Box -->
+      <div class="price-card">
+        <h2>App & API Testing / DAST – Gray Box</h2>
+        <p class="price">$299<span>/Month</span></p>
+        <ul>
+          <li>1 Target (Web App or API)</li>
+          <li>2 scans per month</li>
+          <li>Authenticated scanning for deeper visibility</li>
+          <li>Configuration & logic flaw detection</li>
+          <li>Comprehensive vulnerability report</li>
+        </ul>
+        <a href="#" class="cta-btn">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pentest (PTaaS) Section -->
+  <section id="ptaas" class="pricing-section">
+    <div class="card-container">
+
+      <!-- Gray Box App/API Pentest -->
+      <div class="price-card">
+        <h2>Gray Box App/API Pen Testing</h2>
+        <p class="price">$4999<span>/App</span></p>
+        <ul>
+          <li>Manual VAPT by certified experts (OWASP, PTES)</li>
+          <li>Authenticated testing of business logic</li>
+          <li>Cloud configuration assessment (AWS, GCP, Azure)</li>
+          <li>Detailed report for SOC2, ISO, HIPAA compliance</li>
+          <li>2 Re-scans to verify fixes</li>
+        </ul>
+        <a href="#" class="cta-btn">Get Started</a>
+      </div>
+
+      <!-- Recon / ASM -->
+      <div class="price-card highlight">
+        <div class="badge orange">Most Popular</div>
+        <h2>Recon / ASM</h2>
+        <p class="price">$4999<span>/200 Assets</span></p>
+        <ul>
+          <li>Continuous attack surface monitoring</li>
+          <li>Subdomain & asset discovery automation</li>
+          <li>Risk scoring and exposure tracking</li>
+          <li>API integrations for ticketing systems</li>
+          <li>Ideal for large-scale SaaS environments</li>
+        </ul>
+        <a href="#" class="cta-btn orange">Try Now</a>
+      </div>
+
+      <!-- Red Teaming -->
+      <div class="price-card">
+        <h2>Red Teaming</h2>
+        <p class="price">Custom</p>
+        <ul>
+          <li>Advanced adversarial simulations</li>
+          <li>Physical, network & social engineering vectors</li>
+          <li>Tailored to organization’s threat landscape</li>
+          <li>Strategic recommendations for mitigation</li>
+          <li>Executive summary report for board review</li>
+        </ul>
+        <a href="#" class="cta-btn">Get in Touch</a>
+      </div>
+
+      <!-- Security as a Service -->
+      <div class="price-card">
+        <h2>Security as a Service</h2>
+        <p class="price">Custom</p>
+        <ul>
+          <li>Continuous monitoring & pentesting on demand</li>
+          <li>Dedicated security analyst & shared Slack channel</li>
+          <li>Regular vulnerability scans & reports</li>
+          <li>Compliance alignment for SOC2, ISO27001</li>
+          <li>Custom SLA & reporting frequency</li>
+        </ul>
+        <a href="#" class="cta-btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for Tabs -->
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.pricing-section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.target;
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
+

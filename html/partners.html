@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partners | Global Cyber Works</title>
+  <!-- <meta name="description" content="Partner with Global Cyber Works to strengthen cybersecurity through innovation, trust, and collaboration."> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/> -->
+  <link rel="stylesheet" href="..\css\partners.css" />
+  <link rel="stylesheet" href="..\css\style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="..\html\home.html">Global Cyber Works</a>
+            </div>
+            <ul class="nav-menu">
+                <a href="..\html\home.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="partners.html" class="nav-link">Partners</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+        <div class="hero-container">
+      <h1>Partner with Global Cyber Works</h1>
+      <p>Join forces with a global leader in cybersecurity to deliver innovative solutions and protect the digital world.</p>
+      <a href="#partner-form" class="btn">Become a Partner</a>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="partner-form">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Partnership Application</h2>
+        <p>Complete this form to express your interest in becoming a Global Cyber Works partner. Our team will reach out within 24 hours.</p>
+      </div>
+
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" placeholder="Your company name" required>
+          </div>
+          <div class="form-group">
+            <label>Contact Person</label>
+            <input type="text" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label>Business Email</label>
+            <input type="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Industry</label>
+            <select required>
+              <option disabled selected>Select your industry</option>
+              <option>Technology</option>
+              <option>Finance</option>
+              <option>Healthcare</option>
+              <option>Retail</option>
+              <option>Education</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label>Partnership Goals</label>
+          <textarea placeholder="Tell us about your vision and collaboration goals..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- <script>
+    document.querySelector('form').addEventListener('submit', e=>{
+      e.preventDefault();
+      alert('Thank you for reaching out. Our team will contact you shortly!');
+    });
+  </script> -->
+</body>
+</html>

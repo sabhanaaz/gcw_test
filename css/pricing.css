@@ -1,0 +1,181 @@
+/* Pricing.css */
+:root {
+  --primary-blue: #0A192F;
+  --secondary-blue: #1E3A8A;
+  --accent-red: #E63946;
+  --accent-green: #06D6A0;
+  --light-gray: #F8FAFC;
+  --medium-gray: #E2E8F0;
+  --dark-gray: #334155;
+  --text-dark: #1E293B;
+  --text-light: #64748B;
+  --white: #FFFFFF;
+  --accent-orange: #eb6025;
+  --accent-orange: #eb6025;
+  --light-gray: #f9fafc;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pricing-header {
+ background: linear-gradient(rgb(255, 255, 255), #FFFFFF);
+  /* min-height: calc(12vh - 90px); */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 6rem 1rem; 
+}
+
+.pricing-header-text h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  /* font-size: clamp(2rem, 5vw, 3.2rem) */
+  margin-bottom: 1.5rem;
+  color: var(--primary-blue);
+  font-weight: 800;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.8s ease-out forwards 0.2s;
+}
+
+.pricing-header-text p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideInUp 1s ease-out forwards 0.2s;
+}
+
+.pricing-tabs {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin: 0 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.tab.active {
+  color:   #eb6025;
+  border-bottom: 2px solid #eb6025;
+  font-weight: 600;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+}
+
+.price-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 40px 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.1);
+}
+
+.price-card.highlight {
+  border: 2px solid #eb6025;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 0.75rem;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.badge.orange {
+  background: #eb6025;
+}
+
+.price-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #eb6025;;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px;
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #eb6025;
+}
+
+.cta-btn.orange {
+  background: #eb6025;
+}
+
+.pricing-section {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+
+.pricing-section.active {
+  display: block;
+}

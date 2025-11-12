@@ -1,0 +1,430 @@
+/* style.css */
+
+/* Light Theme Color Palette */
+:root {
+  --primary-blue: #0A192F;
+  --secondary-blue: #1E3A8A;
+  --accent-red: #E63946;
+  --accent-green: #06D6A0;
+  --light-gray: #F8FAFC;
+  --medium-gray: #E2E8F0;
+  --dark-gray: #334155;
+  --text-dark: #1E293B;
+  --text-light: #64748B;
+  --white: #FFFFFF;
+  --accent-orange: #eb6025; 
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  margin-bottom: 1.5rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--light-gray);
+  padding: 1.5rem 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 800;
+  box-shadow: var(--shadow);
+  /* border-bottom: px solid v   ar(--medium-gray); */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.nav-logo a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.nav-link:hover {
+  /*color */
+  color: var(--accent-red);
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 28px;
+  height: 4px;
+  background-color: var(--primary-blue);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Keyframes - animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* static data that present in about, home. in orange color */
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--accent-red), var(--secondary-blue));
+  color: var(--white);
+  padding: clamp(12px, 2vw, 18px) clamp(24px, 4vw, 48px);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.8s ease-out forwards 0.6s;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--secondary-blue), var(--accent-red));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cta-button-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary-blue);
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-blue);
+}
+
+.cta-button-outline:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+
+/* ===== Responsive Design ===== */
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .services-grid,
+    .partnership-benefits,
+    .methodology-steps,
+    .footer-content,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-container,
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+        padding: 1.5rem 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero {
+        padding: 120px 0 60px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    }
+
+    .hero p {
+        font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .services,
+    .pricing,
+    .partners,
+    .about,
+    .contact {
+        padding: 80px 0 60px 0;
+    }
+
+    .services-grid,
+    .partnership-benefits,
+    .methodology-steps,
+    .footer-content,
+    .contact-container,
+    .about-content,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card,
+    .benefit-card,
+    .step {
+        padding: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-hero {
+        min-height: 400px;
+    }
+
+    .partners-hero h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    }
+
+    .partners-hero .section-subtitle {
+        font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    }
+
+    .partners-hero .cta-button {
+        padding: clamp(10px, 1.5vw, 14px) clamp(20px, 3vw, 35px);
+        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    }
+
+    .partnership-form {
+        padding: 2rem;
+        max-width: 100%;
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+    }
+
+    .hero h1 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+
+    .service-card,
+    .benefit-card,
+    .step,
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form,
+    .partnership-form {
+        padding: 1.5rem;
+    }
+
+    .partners-hero {
+        min-height: 350px;
+    }
+
+    .partners-hero h2 {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .partners-hero .section-subtitle {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    }
+
+    .partners-hero .cta-button {
+        padding: clamp(8px, 1.5vw, 12px) clamp(15px, 2.5vw, 30px);
+        font-size: clamp(0.8rem, 1.1vw, 1rem);
+    }
+
+    .partnership-cta h3 {
+        font-size: clamp(1.6rem, 2.5vw, 2rem);
+    }
+
+    .services-grid,
+    .partnership-benefits,
+    .methodology-steps,
+    .footer-content,
+    .contact-container,
+    .about-content,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card,
+    .benefit-card,
+    .step,
+    .pricing-card {
+        padding: 1rem;
+    }
+}
