@@ -1,11 +1,10 @@
 gcw_test/
 ├── .vscode/
-├── html/
-|    ├── about.html
-|    ├── index.html
-|    ├── partners.html
-|    ├── pricing.html
-|    ├── services.html
+├── about.html
+├── index.html
+├── partners.html
+├── pricing.html
+├── services.html
 ├── css/
 ├    |── about.css
 |    ├── home.css
