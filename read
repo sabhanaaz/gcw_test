@@ -1,0 +1,20 @@
+gcw_test/
+├── .vscode/
+├── html/
+|    ├── about.html
+|    ├── index.html
+|    ├── partners.html
+|    ├── pricing.html
+|    ├── services.html
+├── css/
+├    |── about.css
+|    ├── home.css
+|    ├── partners.css
+|    ├── pricing.css
+|    ├── services.css
+|    ├── style.css
+|     
+├── components/
+|     ├── nav.html
+├── images/
+├── .gitgnore
